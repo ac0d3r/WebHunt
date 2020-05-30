@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+verify_ssl = true
+
+[packages]
+requests = "*"
+pysocks = "*"
+click = "*"
+beautifulsoup4 = "*"
+html5lib = "*"
+pymysql = "*"
+pypinyin = "*"
+
+[dev-packages]
+pylint = "*"
+autopep8 = "*"
+kuchiyose = {editable = true,path = "."}
+
+[requires]
+python_version = "3.7"
