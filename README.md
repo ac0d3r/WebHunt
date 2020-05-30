@@ -2,7 +2,7 @@
 
 ![](./docs/banner.jpeg)
 
-jsut for fun
+just for fun
 
 > 一个组件识别工具。
 
