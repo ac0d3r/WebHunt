@@ -4,7 +4,7 @@
 
 just for fun
 
-> 一个组件识别工具。
+> 一个 web 组件识别工具。
 
 对 https://github.com/webanalyzer/rules 组件规则的实现，修改部分规则，新增了支持多线程，支持管理组件更新、同步等功能。
 
