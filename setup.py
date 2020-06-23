@@ -4,7 +4,7 @@ __author__ = '@buzz'
 from setuptools import find_packages, setup
 
 setup(
-    name="kuchiyose",
+    name="webhunt",
     version="0.1",
     description="A Web Component Recognition Tool.",
     author="@buzz",
@@ -16,7 +16,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'kuchiyose=kuchiyose.cli:main_cmd_group'
+            'webhunt=webhunt.cli:main_cmd_group'
         ],
     }
 )

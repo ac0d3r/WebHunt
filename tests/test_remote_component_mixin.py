@@ -1,5 +1,5 @@
 import unittest
-from kuchiyose.core import RemoteComponentMixin, get_uuid
+from webhunt.core import RemoteComponentMixin, get_uuid
 
 
 class ComponentSyncMixinTest(unittest.TestCase):

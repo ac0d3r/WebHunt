@@ -15,7 +15,7 @@ from .utils import bcolors
 main_cmd_group = click.group('main')(lambda: None)
 
 
-@main_cmd_group.command("dog")
+@main_cmd_group.command("scan")
 @click.option("-u", "--url", type=click.STRING, help="Target", required=True)
 @click.option("-d", "--directory", default=os.path.join(os.getcwd(), "components"), help="Components directory, default ./components")
 # request
@@ -56,7 +56,7 @@ def component_sniffer(url, directory, aggression, user_agent, header, disallow_r
                                           ensure_ascii=False)+bcolors.ENDC)
 
 
-@main_cmd_group.command("toad")
+@main_cmd_group.command("manage")
 @click.option("-d", "--directory", default=os.path.join(os.getcwd(), "components"), help="Components directory, default ./components")
 # list
 @click.option("-l", "--list", is_flag=True, default=False, help="List components")

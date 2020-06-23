@@ -1,4 +1,4 @@
-# Kuchiyose
+# WebHunt
 
 ![](./docs/banner.jpeg)
 
@@ -13,14 +13,14 @@ just for fun
 - 从 [rules](https://github.com/webanalyzer/rules) 更新组件
 
 ```bash
-kuchiyose toad --pull_webanalyzer
+webhunt manage --pull_webanalyzer
 ```
 
 - scan
 
 ```bash
-kuchiyose dog -u http://www.baidu.com
-kuchiyose dog -u http://www.baidu.com -a
+webhunt scan -u http://www.baidu.com
+webhunt scan -u http://www.baidu.com -a
 ```
 
 ## Thx

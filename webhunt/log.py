@@ -6,7 +6,7 @@ import logging
 FORMAT = '[%(asctime)s] [%(process)d] [%(levelname)s] %(message)s'
 TIMESTAMP_FORMAT = '%Y-%m-%d %H:%M:%S %z'
 
-logger = logging.getLogger("kuchiyose")
+logger = logging.getLogger("webhunt")
 logger.propagate = False
 
 

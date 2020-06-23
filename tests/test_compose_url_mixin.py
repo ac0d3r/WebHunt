@@ -1,6 +1,6 @@
 import unittest
 
-from kuchiyose.core import ComposeURLMixin
+from webhunt.core import ComposeURLMixin
 
 
 class ComposeURLMixinTest(unittest.TestCase):

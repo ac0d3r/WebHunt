@@ -2,7 +2,7 @@ import os
 import unittest
 from typing import Generator
 
-from kuchiyose.core import Component, ComponentGeneratorMixin, ComponentType
+from webhunt.core import Component, ComponentGeneratorMixin, ComponentType
 
 
 class ComponentTest(unittest.TestCase):

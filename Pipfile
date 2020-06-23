@@ -15,7 +15,7 @@ pypinyin = "*"
 [dev-packages]
 pylint = "*"
 autopep8 = "*"
-kuchiyose = {editable = true,path = "."}
+webhunt = {editable = true,path = "."}
 
 [requires]
 python_version = "3.7"
