@@ -1,6 +1,6 @@
 # WebHunt
 
-![](./docs/banner.jpeg)
+![](https://avatars3.githubusercontent.com/u/68050453?s=200&v=4)
 
 just for fun
 
