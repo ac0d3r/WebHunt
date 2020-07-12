@@ -10,6 +10,7 @@
 
 ```bash
 git clone https://github.com/WebHunt-Kits/WebHunt.git
+pip3 install -r requirements.txt
 ```
 
 ## Usage
