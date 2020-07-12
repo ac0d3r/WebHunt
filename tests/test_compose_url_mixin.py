@@ -1,6 +1,6 @@
 import unittest
 
-from webhunt.core import ComposeURLMixin
+from src.core import ComposeURLMixin
 
 
 class ComposeURLMixinTest(unittest.TestCase):

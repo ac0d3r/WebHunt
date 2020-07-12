@@ -3,7 +3,7 @@ import threading
 import time
 import unittest
 
-from webhunt import utils
+from src import utils
 
 
 class Demo:

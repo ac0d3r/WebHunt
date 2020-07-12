@@ -323,7 +323,7 @@ class ComponentManager(ComponentGeneratorMixin, RemoteComponentMixin):
                 self._create_component_file(path, c_data)
 
     def pull_from_webanalyzer(self):
-        """Component update default from 'https://github.com/webanalyzer/rules'
+        """Pull components from 'https://github.com/webanalyzer/rules'
         """
         logger.info("%sStart update components from 'https://github.com/webanalyzer/rules' ...%s",
                     bcolors.HEADER, bcolors.ENDC)

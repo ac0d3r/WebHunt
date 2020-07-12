@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 __author__ = "@buzz"
 
@@ -6,9 +7,9 @@ import os
 
 import click
 
-from .core import ComponentManager, ComponentSniffer
-from .log import setup_logger
-from .utils import bcolors
+from src.core import ComponentManager, ComponentSniffer
+from src.log import setup_logger
+from src.utils import bcolors
 
 
 # register main group
@@ -62,7 +63,7 @@ def component_sniffer(url, directory, aggression, user_agent, header, disallow_r
 @click.option("-l", "--list", is_flag=True, default=False, help="List components")
 # pull
 @click.option("--pull", is_flag=True, default=False, help="Pull custom components from remote database")
-@click.option("--pull_webanalyzer", is_flag=True, default=False, help="Pull custom components from remote database")
+@click.option("--pull_webanalyzer", is_flag=True, default=False, help="Pull components from 'https://github.com/webanalyzer/rules'")
 # sync
 @click.option("--sync", is_flag=True, default=False, help="Synchronize to remote database")
 @click.option("--sync-updating", is_flag=True, default=False, help="Update existing components when synchronizing to remote database")

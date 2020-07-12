@@ -1,7 +1,7 @@
 import unittest
 from typing import Dict
 
-from webhunt.core import RequestManagerMixin, fake_user_agent, plain2md5
+from src.core import RequestManagerMixin, fake_user_agent, plain2md5
 
 
 class RequestManagerMixinTest(unittest.TestCase):
