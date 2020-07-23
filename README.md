@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/26270009/87249915-737d0b00-c494-11ea-9c9a-1b63d1da843a.png)
 
-> A Web Component Recognition Tool.
+> A command line tool for analyzing web components for security testing. 𒈯
 
 对 https://github.com/webanalyzer/rules 组件规则的实现，修改部分规则，新增了支持多线程，支持管理组件更新、同步等功能。
 
