@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-__author__ = '@buzz'
 
 import hashlib
 import os
@@ -14,18 +13,20 @@ import socks
 import urllib3
 from pypinyin import Style, pinyin
 
-from .log import logger
+from src.log import logger
 
 
 class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
+    Purple = '\033[95m'
+    Blue = '\033[94m'
+    Green = '\033[92m'
+    Yellow = '\033[93m'
+    Red = '\033[91m'
+
+    Bold = '\033[1m'
+    Underline = '\033[4m'
+
     ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
 
 
 class cached_property(object):
@@ -103,7 +104,7 @@ def plain2md5(s: str, encoding='utf8'):
     if isinstance(s, str):
         s = s.encode(encoding)
     elif not isinstance(s, bytes):
-        raise TypeError("Only STR and bytes are supported")
+        raise TypeError("Only str and bytes are supported")
     return hashlib.md5(s).hexdigest()
 
 
@@ -135,9 +136,21 @@ def get_uuid():
 
 
 def get_pinyin_first_letter(name: str):
+    f = 'a'
     try:
         # https://github.com/mozillazg/python-pinyin
-        return pinyin(name, style=Style.INITIALS, strict=False)[0][0][0].lower()
+        f = pinyin(name, style=Style.INITIALS, strict=False)[0][0][0].lower()
+        if ord(f) < 97:
+            f = 'a'
+        elif ord(f) > 122:
+            f = 'z'
     # pylint: disable=bare-except
     except:
-        return 'z'
+        pass
+    return f
+
+
+def confirm_continue(msg=None):
+    if not msg:
+        msg = "Do you want to continue?"
+    input(msg)

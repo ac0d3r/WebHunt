@@ -9,31 +9,53 @@
 ## Installation
 
 ```bash
-git clone https://github.com/WebHunt-Kits/WebHunt.git
+git clone https://github.com/./webhunt-Kits/./webhunt.git
 pip3 install -r requirements.txt
 ```
 
 ## Usage
 
-- man
-
 ```bash
-./webhunt --help
-./webhunt manage --help
-./webhunt scan --help
+# all commands help
+$ ./webhunt --help
+
+## Scan
+$ ./webhunt scan --help
+# 扫描 http://www.example.com
+$ ./webhunt scan -u http://www.example.com
+# 开启侵略模式
+$ ./webhunt scan -a -u http://www.example.com
+# 指定组件（多个）
+$ ./webhunt scan -a -u http://www.example.com -c Nginx -c WordPress
+
+
+## Manage
+$ ./webhunt manage --help
+# 从远程数据库拉取组件到本地
+$ ./webhunt manage --pull --db Database --user root --passwd "hello"
+# 同步组件到远程数据库
+$ ./webhunt manage --sync --db Database --user root --passwd "hello"
+# 同步并更新已存在的组件到远程数据库
+$ ./webhunt manage --sync --sync-updating --db Database --user root --passwd "hello"
 ```
 
-- 从 [rules](https://github.com/webanalyzer/rules) 更新组件
-
-```bash
-./webhunt manage --pull_webanalyzer
+## Result Demo:
+```Json
+[{"name": "title", "title": "Hyuga Platform🌀"}, {"name": "ip", "ips": ["39.107.117.128"]}, {"name": "Apache-Tomcat"}, {"name": "Plesk"}, {"name": "JBoss"}, {"name": "Nginx", "version": "1.8.0"}, {"name": "ElasticSearch"}, {"name": "Atlassian-Confluence"}, {"name": "Drupal"}, {"name": "MikroTik"}, {"name": "NVRmini2", "version": "2013"}, {"name": "Microsoft-Windows-Business-Server", "version": 2003}]
 ```
 
-- scan
+# Components
 
-```bash
-./webhunt scan -u http://www.baidu.com
-./webhunt scan -u http://www.baidu.com -a
+插件脚本编放在 `./components` 目录下或者指定其目录，在运行时使用`./webhunt ... -d [指定组件目录]`
+
+## 组件编写规范 <div id="templates"></div>
+
+如下：[templates.md](./templates/templates.md)
+
+
+## Dev
+```shell
+$ pipenv install -dev
 ```
 
 ## Thx

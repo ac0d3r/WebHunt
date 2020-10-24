@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
-__author__ = '@buzz'
 
 import logging
+
+import src
 
 FORMAT = '[%(asctime)s] [%(process)d] [%(levelname)s] %(message)s'
 TIMESTAMP_FORMAT = '%Y-%m-%d %H:%M:%S %z'
 
-logger = logging.getLogger("webhunt")
+logger = logging.getLogger(src.__name__)
 logger.propagate = False
 
 

@@ -60,7 +60,7 @@ docs/_build/
 target/
 
 .venv
-.vscode
+.vscode/
 __scripts
 
 .index
@@ -74,3 +74,4 @@ __scripts
 # dev
 Pipfile.lock
 .update-tmp/
+.components/

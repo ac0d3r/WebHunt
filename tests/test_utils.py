@@ -62,6 +62,11 @@ class UtilsTest(unittest.TestCase):
         self.assertEqual("n", utils.get_pinyin_first_letter("你好"))
         self.assertEqual("a", utils.get_pinyin_first_letter("assert"))
         self.assertEqual("n", utils.get_pinyin_first_letter("Nginx"))
+        # 特殊字符
+        self.assertEqual("a", utils.get_pinyin_first_letter("-hao"))
+        self.assertEqual("z", utils.get_pinyin_first_letter("{hao"))
+        self.assertEqual("a", utils.get_pinyin_first_letter("/hao"))
+        self.assertEqual("z", utils.get_pinyin_first_letter("」hao"))
 
 
 if __name__ == "__main__":

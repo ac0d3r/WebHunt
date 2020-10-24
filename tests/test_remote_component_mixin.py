@@ -1,5 +1,7 @@
 import unittest
-from src.core import RemoteComponentMixin, get_uuid
+
+from src.core import RemoteComponentMixin
+from src.utils import get_uuid
 
 
 class ComponentSyncMixinTest(unittest.TestCase):

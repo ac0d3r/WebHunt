@@ -18,7 +18,7 @@ limitations under the License.
 import string
 from typing import Dict
 
-from .log import logger
+from src.log import logger
 
 __all__ = ["Condition", "ParseException"]
 
